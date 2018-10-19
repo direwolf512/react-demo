@@ -4,9 +4,17 @@ import '../index.css';
 
 class Board extends React.Component {
     renderSquare (i) {
+        const winnerSquares = this.props.winnerSquares;
+        let ifActive = false;
+        for (let j = 0; j < winnerSquares.length; j++) {
+					console.log(winnerSquares[j]);
+					if (winnerSquares[j].indexOf(i) > -1) {
+					    ifActive = true;
+          }
+        }
         return (
             <Square 
-                ifActive={this.props.winnerSquares.indexOf(i) > -1 ? true : false}
+                ifActive={ifActive}
                 squares={this.props.squares[i]} 
                 onClick={() => this.props.onClick(i)} />
         )

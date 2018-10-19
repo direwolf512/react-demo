@@ -100,17 +100,17 @@ function whoIsWinner (squares) {
         [2, 5, 8],
         [0, 4, 8],
         [2, 4, 6]
-    ]
+    ];
+    let winnerSquareList = [];
+    let winner;
     for (let i = 0; i < winnerList.length; i++) {
         let [a, b, c] = winnerList[i];
         if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-            return {
-                winner: squares[a],
-                winnerSquares: winnerList[i]
-            }
+            winner = squares[a];
+					  winnerSquareList.push(winnerList[i]);
         }
     }
-    return null;
+    return winner ? {winner: winner, winnerSquares: winnerSquareList} : null;
 }
 
 export default Game;
