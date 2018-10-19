@@ -1,7 +1,8 @@
 import React from 'react';
-import Board from './Board'
-import Moves from './Moves'
-import '../index.css'
+import Board from './Board';
+import Moves from './Moves';
+import '../../css/index.css';
+import '../../css/game/game.css';
 
 class Game extends React.Component {
     constructor () {
@@ -73,7 +74,7 @@ class Game extends React.Component {
                         squares={current.square} />
                 </div>
                 <div className='game-info'>
-                    <p>{status}</p>
+                    <p className='status'>{status}</p>
                     <button onClick={() => this.orderChange()}>
                         {order}
                     </button>

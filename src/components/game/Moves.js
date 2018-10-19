@@ -1,5 +1,6 @@
 import React from 'react';
-import '../index.css';
+import '../../css/index.css';
+import '../../css/game/moves.css';
 
 class Moves extends React.Component {
     render () {

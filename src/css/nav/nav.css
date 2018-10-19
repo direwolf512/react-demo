@@ -1,0 +1,18 @@
+.home-nav {
+    display: flex;
+    margin-bottom: 20px;
+}
+  
+.nav-item {
+    display: block;
+}
+
+.nav-item a {
+    padding: 0 10px;
+    text-decoration: none;
+    color: #000;
+}
+
+.nav-item a:hover {
+    color: #00c1de;
+}
